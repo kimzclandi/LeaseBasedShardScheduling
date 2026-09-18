@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+runs/
+*.sqlite*
+.DS_Store
+.ruff_cache/

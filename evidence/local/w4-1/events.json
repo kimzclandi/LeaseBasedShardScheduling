@@ -1,0 +1,297 @@
+{
+  "events": [
+    {
+      "at": 1789723581.026874,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 0
+    },
+    {
+      "at": 1789723581.02824,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 1
+    },
+    {
+      "at": 1789723581.029564,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 2
+    },
+    {
+      "at": 1789723581.030272,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 1
+    },
+    {
+      "at": 1789723581.030754,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 3
+    },
+    {
+      "at": 1789723581.032765,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 3
+    },
+    {
+      "at": 1789723581.033354,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 4
+    },
+    {
+      "at": 1789723581.034362,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 2
+    },
+    {
+      "at": 1789723581.034632,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 5
+    },
+    {
+      "at": 1789723581.034988,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 6
+    },
+    {
+      "at": 1789723581.0368562,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 4
+    },
+    {
+      "at": 1789723581.037472,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 7
+    },
+    {
+      "at": 1789723581.03842,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 6
+    },
+    {
+      "at": 1789723581.038985,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 8
+    },
+    {
+      "at": 1789723581.0404391,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 5
+    },
+    {
+      "at": 1789723581.041004,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 9
+    },
+    {
+      "at": 1789723581.0428648,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 9
+    },
+    {
+      "at": 1789723581.043416,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 10
+    },
+    {
+      "at": 1789723581.045044,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 10
+    },
+    {
+      "at": 1789723581.045606,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 11
+    },
+    {
+      "at": 1789723581.047122,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 7
+    },
+    {
+      "at": 1789723581.0476649,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 12
+    },
+    {
+      "at": 1789723581.049183,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 12
+    },
+    {
+      "at": 1789723581.049721,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 13
+    },
+    {
+      "at": 1789723581.050718,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 8
+    },
+    {
+      "at": 1789723581.051252,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 11
+    },
+    {
+      "at": 1789723581.052567,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 13
+    },
+    {
+      "at": 1789723581.053078,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 14
+    },
+    {
+      "at": 1789723581.054383,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 15
+    },
+    {
+      "at": 1789723581.055139,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 16
+    },
+    {
+      "at": 1789723581.055991,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 14
+    },
+    {
+      "at": 1789723581.056581,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 17
+    },
+    {
+      "at": 1789723581.057377,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 15
+    },
+    {
+      "at": 1789723581.057934,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 18
+    },
+    {
+      "at": 1789723581.059436,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 18
+    },
+    {
+      "at": 1789723581.0600479,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 19
+    },
+    {
+      "at": 1789723581.0608692,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 16
+    },
+    {
+      "at": 1789723581.0614989,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 20
+    },
+    {
+      "at": 1789723581.062315,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 17
+    },
+    {
+      "at": 1789723581.062834,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 21
+    },
+    {
+      "at": 1789723581.0644338,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 21
+    },
+    {
+      "at": 1789723581.064981,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 22
+    },
+    {
+      "at": 1789723581.06573,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 19
+    },
+    {
+      "at": 1789723581.066232,
+      "attempt": 1,
+      "kind": "claimed",
+      "shard": 23
+    },
+    {
+      "at": 1789723581.067703,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 23
+    },
+    {
+      "at": 1789723581.068318,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 20
+    },
+    {
+      "at": 1789723581.0694242,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 22
+    },
+    {
+      "at": 1789723581.070914,
+      "attempt": 1,
+      "kind": "committed",
+      "shard": 0
+    }
+  ],
+  "states": {
+    "done": 24
+  },
+  "successful": true,
+  "terminal": true
+}
