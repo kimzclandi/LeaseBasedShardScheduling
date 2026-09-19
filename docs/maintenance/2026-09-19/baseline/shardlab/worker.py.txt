@@ -1,7 +1,6 @@
 """Independent HTTP worker; no shared SQLite connection or filesystem input."""
 
 import argparse
-from http.client import IncompleteRead
 import json
 import time
 import urllib.error
@@ -30,7 +29,7 @@ def request(url, route, body, attempts=4):
             exc.close()
             if exc.code < 500 or attempt == attempts - 1:
                 raise ApiError(exc.code, msg) from exc
-        except (urllib.error.URLError, TimeoutError, ConnectionError, IncompleteRead):
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
             if attempt == attempts - 1:
                 raise
         time.sleep(0.05 * 2**attempt)

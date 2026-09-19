@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-19",
+  "base_commit": "337c92878df63586d940cb61598808e50184b8b9",
+  "scope": "Local maintenance verification; no remote CI for this unpushed change and no new model quality claim",
+  "tests_passed": 28,
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "returncode": 0
+    },
+    {
+      "command": "python3 scripts/verify_evidence.py",
+      "returncode": 0
+    },
+    {
+      "command": "python3 scripts/demo.py --out runs/final-audit --repeats 1",
+      "returncode": 0
+    }
+  ],
+  "changed_python_sha256": {
+    "scripts/verify_evidence.py": "1741cb8e10643a45c5b3c371aaa57eb6c855ad27150ac9069e72aac808435409",
+    "shardlab/worker.py": "1bee7976b8df7b38608f954c211426a42ee32a66ebedc0d79e3deb2f2ee8d003",
+    "tests/test_lost_response.py": "caead07c2e839743dadba2d8b7fc4067fb0671dc81e93a8be147f04eeb5c3977"
+  }
+}
