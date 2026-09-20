@@ -1,6 +1,9 @@
 # AI Data Shard Lab · 数据分片处理与故障恢复
 
+![Project wordmark](.github/project-header.svg)
+
 [![reliability-contracts](https://github.com/kimzclandi/ai-data-shard-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/ai-data-shard-lab/actions/workflows/ci.yml)
+[![Stars](https://img.shields.io/github/stars/kimzclandi/ai-data-shard-lab?style=flat)](https://github.com/kimzclandi/ai-data-shard-lab/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **一个 worker 处理完数据却没有收到提交响应，再重试会发生什么？一个过期 worker 恢复后，能否覆盖新结果？**
 
@@ -8,17 +11,30 @@
 
 **已验证范围：单机、多进程、loopback HTTP、合成文本。** 实现分布式任务处理中常见的租约、fencing 和幂等机制，但没有多机部署、分布式存储、共识协议或生产规模验证。没有模型训练，基础清洗规则不代表语义质量评估。
 
+## 功能特性 / Features
+
+- HTTP worker 分片调度与 SQLite 租约。
+- fencing、幂等提交与故障恢复。
+- 确定性清洗产物和可追溯清单。
+
 ## 项目沿革（2026-09-20 补记）
 
 根据维护者对本地开发过程的说明，相关早期工作约于 2026 年 6 月开始在本地开展，之后集中整理并上传 GitHub。该月份是早期工作的近似起点，不表示当前全部功能和实验在当时已完成。后续实现、实验与维护保留各自的实际版本及运行日期。
 
-## 快速验证
+## 快速开始 / Quick Start
 
 需要 Python 3.12+、macOS 或 Linux；无第三方运行依赖、模型下载或付费 API。
+
+### Installation / 安装
 
 ```bash
 git clone https://github.com/kimzclandi/ai-data-shard-lab.git
 cd ai-data-shard-lab
+```
+
+### Usage / 使用示例
+
+```bash
 python3 -m unittest discover -s tests -v
 python3 scripts/verify_evidence.py
 python3 scripts/demo.py --out runs/my-first-run --repeats 1
@@ -61,3 +77,13 @@ python3 scripts/demo.py --out runs/my-first-run --repeats 1
 [2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
 
 [2026-09-21 工程维护与验证](docs/maintenance/2026-09-21/README.md)
+
+## Contributing / 参与贡献
+
+[贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [结构与维护](docs/MAINTAINING.md)
+
+[反馈问题](https://github.com/kimzclandi/ai-data-shard-lab/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/ai-data-shard-lab/issues/new?template=feature_request.yml)
+
+## License
+
+Project code: [MIT](LICENSE). See the license for its scope.

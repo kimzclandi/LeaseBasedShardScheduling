@@ -1,0 +1,40 @@
+name: Bug report / 问题反馈
+description: Report a reproducible failure in code, documentation or saved-evidence checks.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: Please remove tokens, personal data and restricted datasets from logs. 中文或 English 均可。
+  - type: input
+    id: revision
+    attributes:
+      label: Commit or version / 版本
+      description: Paste git rev-parse HEAD, or the affected page URL for a documentation issue.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 环境
+      description: OS, architecture, runtime version, dependency installation command; use N/A for a page issue.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction / 最小复现
+      description: Commands, input source or public fixture, and relevant configuration. For a page issue, include the broken link.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior / 预期与实际
+      description: Include the complete error and whether this is replay, new inference, training or a documentation issue.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs / 脱敏日志
+      render: text
