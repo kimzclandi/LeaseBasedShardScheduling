@@ -1,33 +1,28 @@
-# Naming and compatibility
+# 项目名称与兼容性
 
-This project is now **Shard Runner** (`shard-runner`), previously `ai-data-shard-lab`.
-The rename changes the public repository and display name, not the experiment or its results.
+项目展示名称：**基于租约的分片任务调度与故障恢复**。
 
-## Current checkout
+GitHub 仓库名：`LeaseBasedShardScheduling`。
 
-```sh
-git clone https://github.com/kimzclandi/shard-runner.git
-cd shard-runner
-```
+历史仓库名：`ai-data-shard-lab`、`shard-runner`。旧名仅用于历史溯源。
 
-For an existing checkout, update its remote from the repository root:
+## 获取代码
 
 ```sh
-git remote set-url origin https://github.com/kimzclandi/shard-runner.git
+git clone https://github.com/kimzclandi/LeaseBasedShardScheduling.git
+cd LeaseBasedShardScheduling
 ```
 
-Renaming the local checkout directory is optional. Existing issue and PR numbers are retained.
+已有 checkout 可在仓库根目录更新 remote；本地目录是否改名不影响运行。
 
-## Compatibility and historical records
+```sh
+git remote set-url origin https://github.com/kimzclandi/LeaseBasedShardScheduling.git
+```
 
-Python distribution/import names, command-line entry points, Go module paths and protocol
-identifiers remain unchanged. Use the installation and run commands in the current README;
-a public rename does not require a package or database migration.
+## 兼容性与历史记录
 
-Frozen protocols, manifests, source archives, measured outputs, dated reports and license
-notices retain their original text and hashes. Old names in those records identify the
-historical project and are not separate implementations. No experiment is rerun or rebranded
-as a new result. New public navigation uses the current names.
+此次调整公开仓库名和项目展示名。Python 包名、import、CLI、Go module 路径和协议标识保持兼容，安装与运行命令以当前 README 为准。
 
+冻结协议、manifest、源码快照、原始预测、实验报告与许可条款保持不变。历史文件中的旧名不是另一个项目；改名不产生新的实验结果。现有 Issue 和 PR 编号继续使用。
 
-[GitHub repository rename behavior](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)
+[GitHub 仓库改名说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)

@@ -1,9 +1,9 @@
-# Shard Runner
+# 基于租约的分片任务调度与故障恢复
 
 ![Project wordmark](.github/project-header.svg)
 
-[![reliability-contracts](https://github.com/kimzclandi/shard-runner/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/shard-runner/actions/workflows/ci.yml)
-[![Stars](https://img.shields.io/github/stars/kimzclandi/shard-runner?style=flat)](https://github.com/kimzclandi/shard-runner/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![reliability-contracts](https://github.com/kimzclandi/LeaseBasedShardScheduling/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/LeaseBasedShardScheduling/actions/workflows/ci.yml)
+[![Stars](https://img.shields.io/github/stars/kimzclandi/LeaseBasedShardScheduling?style=flat)](https://github.com/kimzclandi/LeaseBasedShardScheduling/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **一个 worker 处理完数据却没有收到提交响应，再重试会发生什么？一个过期 worker 恢复后，能否覆盖新结果？**
 
@@ -28,8 +28,8 @@
 ### Installation / 安装
 
 ```bash
-git clone https://github.com/kimzclandi/shard-runner.git
-cd shard-runner
+git clone https://github.com/kimzclandi/LeaseBasedShardScheduling.git
+cd LeaseBasedShardScheduling
 ```
 
 ### Usage / 使用示例
@@ -82,7 +82,7 @@ python3 scripts/demo.py --out runs/my-first-run --repeats 1
 
 [贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [结构与维护](docs/MAINTAINING.md)
 
-[反馈问题](https://github.com/kimzclandi/shard-runner/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/shard-runner/issues/new?template=feature_request.yml)
+[反馈问题](https://github.com/kimzclandi/LeaseBasedShardScheduling/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/LeaseBasedShardScheduling/issues/new?template=feature_request.yml)
 
 ## License
 
