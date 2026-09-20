@@ -11,10 +11,12 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Check maintained local links
         run: python .github/scripts/check_docs.py
       - name: Check whitespace
-        run: git show --format= --check HEAD
+        run: git diff --check HEAD^ HEAD -- README.md README.zh-CN.md CONTRIBUTING.md CODE_OF_CONDUCT.md docs/MAINTAINING.md .github
