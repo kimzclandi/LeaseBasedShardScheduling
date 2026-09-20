@@ -1,0 +1,19 @@
+[
+  {
+    "event": "commit_ack_discarded",
+    "shard": 0
+  },
+  {
+    "event": "coordinator_sigkill_restart_and_commit_replay",
+    "passed": true
+  },
+  {
+    "event": "worker_sigkill_after_claim",
+    "shard": 1,
+    "token": 1
+  },
+  {
+    "event": "stale_commit_rejected",
+    "http_status": 409
+  }
+]

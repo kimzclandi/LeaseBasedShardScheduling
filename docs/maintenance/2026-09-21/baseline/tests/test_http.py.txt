@@ -49,25 +49,3 @@ class HttpBoundary(unittest.TestCase):
         with self.assertRaises(ApiError) as ctx:
             request(self.url, "/publish", {"run": "http"})
         self.assertEqual(ctx.exception.status, 409)
-
-    def test_malformed_identities_are_400_and_leave_run_usable(self):
-        run = 'typed-http'
-        request(self.url, '/submit', {'run': run, 'records': [{'text': 'valid training sample'}]})
-        task = request(self.url, '/claim', {'run': run, 'worker': 'worker'})['task']
-        from shardlab.core import commit_args
-        args = commit_args(task)
-        for route, body in [
-            ('/status', {'run': []}),
-            ('/publish', {'run': 1}),
-            ('/claim', {'run': run, 'worker': 'w', 'lease_seconds': True}),
-            ('/commit', {**args, 'token': True}),
-            ('/commit', {**args, 'shard': 2**80}),
-            ('/renew', {k: task[k] for k in ('run', 'shard', 'token', 'worker')} | {'token': 1.0}),
-        ]:
-            with self.subTest(route=route, body=body):
-                with self.assertRaises(ApiError) as ctx:
-                    request(self.url, route, body)
-                self.assertEqual(ctx.exception.status, 400)
-                self.assertEqual(request(self.url, '/status', {'run': run})['states'], {'leased': 1})
-        self.assertFalse(request(self.url, '/commit', args)['replayed'])
-        self.assertTrue(request(self.url, '/status', {'run': run})['successful'])
