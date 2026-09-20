@@ -1,5 +1,7 @@
 # AI Data Shard Lab · 数据分片处理与故障恢复
 
+**简体中文** | [English](README.en.md)
+
 [![reliability-contracts](https://github.com/kimzclandi/ai-data-shard-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/ai-data-shard-lab/actions/workflows/ci.yml)
 
 **一个 worker 处理完数据却没有收到提交响应，再重试会发生什么？一个过期 worker 恢复后，能否覆盖新结果？**
