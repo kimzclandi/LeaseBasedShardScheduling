@@ -19,4 +19,4 @@ jobs:
       - name: Check maintained local links
         run: python .github/scripts/check_docs.py
       - name: Check whitespace
-        run: git diff --check HEAD^ HEAD -- README.md README.zh-CN.md CONTRIBUTING.md CODE_OF_CONDUCT.md docs/MAINTAINING.md .github
+        run: git diff --check HEAD^ HEAD -- README.md README.zh-CN.md CONTRIBUTING.md CODE_OF_CONDUCT.md docs/MAINTAINING.md docs/NAMING.md .github

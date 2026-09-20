@@ -1,9 +1,9 @@
-# AI Data Shard Lab · 数据分片处理与故障恢复
+# Shard Runner
 
 ![Project wordmark](.github/project-header.svg)
 
-[![reliability-contracts](https://github.com/kimzclandi/ai-data-shard-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/ai-data-shard-lab/actions/workflows/ci.yml)
-[![Stars](https://img.shields.io/github/stars/kimzclandi/ai-data-shard-lab?style=flat)](https://github.com/kimzclandi/ai-data-shard-lab/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![reliability-contracts](https://github.com/kimzclandi/shard-runner/actions/workflows/ci.yml/badge.svg)](https://github.com/kimzclandi/shard-runner/actions/workflows/ci.yml)
+[![Stars](https://img.shields.io/github/stars/kimzclandi/shard-runner?style=flat)](https://github.com/kimzclandi/shard-runner/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **一个 worker 处理完数据却没有收到提交响应，再重试会发生什么？一个过期 worker 恢复后，能否覆盖新结果？**
 
@@ -28,8 +28,8 @@
 ### Installation / 安装
 
 ```bash
-git clone https://github.com/kimzclandi/ai-data-shard-lab.git
-cd ai-data-shard-lab
+git clone https://github.com/kimzclandi/shard-runner.git
+cd shard-runner
 ```
 
 ### Usage / 使用示例
@@ -82,8 +82,10 @@ python3 scripts/demo.py --out runs/my-first-run --repeats 1
 
 [贡献指南](CONTRIBUTING.md) · [行为准则](CODE_OF_CONDUCT.md) · [结构与维护](docs/MAINTAINING.md)
 
-[反馈问题](https://github.com/kimzclandi/ai-data-shard-lab/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/ai-data-shard-lab/issues/new?template=feature_request.yml)
+[反馈问题](https://github.com/kimzclandi/shard-runner/issues/new?template=bug_report.yml) · [建议功能](https://github.com/kimzclandi/shard-runner/issues/new?template=feature_request.yml)
 
 ## License
 
 Project code: [MIT](LICENSE). See the license for its scope.
+
+[项目名称与兼容性说明 / Naming and compatibility](docs/NAMING.md)
