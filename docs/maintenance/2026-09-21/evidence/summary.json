@@ -1,0 +1,129 @@
+{
+  "environment": {
+    "python": "3.12.13",
+    "system": "Darwin",
+    "machine": "arm64",
+    "cpu_count": 16,
+    "topology": "one host; loopback HTTP; one SQLite coordinator"
+  },
+  "fixture": {
+    "rows": 1200,
+    "shards": 24,
+    "accepted_unique": 1000,
+    "duplicates": 100,
+    "quarantine": 100
+  },
+  "source_sha256": {
+    "shardlab/__init__.py": "de625e0cbb33dab4b5ea85193f2b5d3410e9d26b351f837478fa846437365fcb",
+    "shardlab/core.py": "76349f80c72f79783ef91c52896d3d2c78c9291ce5d24a64fecff1ea95779066",
+    "shardlab/server.py": "42adf45a296beb20d4e9feaea1665871e53695b342ebd8a2cdd744ec1653ff1e",
+    "shardlab/worker.py": "1bee7976b8df7b38608f954c211426a42ee32a66ebedc0d79e3deb2f2ee8d003",
+    "scripts/demo.py": "ca7dc9cadf8543608c58dc88b26cfcd54478cbd6debdca704dccdfbc96eafef3",
+    "scripts/verify_evidence.py": "b6eee7d3d5715a66dadb7d03739ff916467e2731ecdfb5014f258dad7f8f0025",
+    "tests/test_core.py": "8425eff7e0fe20826227dfd77075d898a4dc59416f4f3fd66e938e26d929dda2",
+    "tests/test_http.py": "96661f1790b93f5c3798a05307a4e49a558b988725777a6a5da13f44a19c2723",
+    "tests/test_identity_types.py": "203688eb16079a31dc01a6f1991591bfd7bff185f1ec8a43bf5862213d22633a",
+    "tests/test_lost_response.py": "caead07c2e839743dadba2d8b7fc4067fb0671dc81e93a8be147f04eeb5c3977"
+  },
+  "results": [
+    {
+      "workers": 1,
+      "fault_injection": false,
+      "seconds": 0.12450995900144335,
+      "rows_per_second": 9637.78327150593,
+      "manifest_sha256": "1032ddaa5bafab4a5bab70182390b888ad6e990562044778fa52d03479e55ba5",
+      "states": {
+        "done": 24
+      },
+      "worker_receipts": [
+        {
+          "committed": 24,
+          "worker": "worker-0"
+        }
+      ],
+      "fault_trace": []
+    },
+    {
+      "workers": 4,
+      "fault_injection": false,
+      "seconds": 0.19521266699302942,
+      "rows_per_second": 6147.14208091245,
+      "manifest_sha256": "1032ddaa5bafab4a5bab70182390b888ad6e990562044778fa52d03479e55ba5",
+      "states": {
+        "done": 24
+      },
+      "worker_receipts": [
+        {
+          "committed": 9,
+          "worker": "worker-0"
+        },
+        {
+          "committed": 3,
+          "worker": "worker-1"
+        },
+        {
+          "committed": 2,
+          "worker": "worker-2"
+        },
+        {
+          "committed": 10,
+          "worker": "worker-3"
+        }
+      ],
+      "fault_trace": []
+    },
+    {
+      "workers": 4,
+      "fault_injection": true,
+      "seconds": 0.41063687499263324,
+      "rows_per_second": 2922.2899186088143,
+      "manifest_sha256": "1032ddaa5bafab4a5bab70182390b888ad6e990562044778fa52d03479e55ba5",
+      "states": {
+        "done": 24
+      },
+      "worker_receipts": [
+        {
+          "committed": 7,
+          "worker": "worker-0"
+        },
+        {
+          "committed": 8,
+          "worker": "worker-1"
+        },
+        {
+          "committed": 4,
+          "worker": "worker-2"
+        },
+        {
+          "committed": 4,
+          "worker": "worker-3"
+        }
+      ],
+      "fault_trace": [
+        {
+          "event": "commit_ack_discarded",
+          "shard": 0
+        },
+        {
+          "event": "coordinator_sigkill_restart_and_commit_replay",
+          "passed": true
+        },
+        {
+          "event": "worker_sigkill_after_claim",
+          "shard": 1,
+          "token": 1
+        },
+        {
+          "event": "stale_commit_rejected",
+          "http_status": 409
+        }
+      ]
+    }
+  ],
+  "median_seconds": {
+    "one_worker": 0.12450995900144335,
+    "four_workers": 0.19521266699302942
+  },
+  "observed_speedup": 0.6378170070587136,
+  "scope": "local synthetic text processing; no model training or production scale"
+}

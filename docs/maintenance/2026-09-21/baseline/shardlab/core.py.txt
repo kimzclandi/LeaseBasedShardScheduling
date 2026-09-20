@@ -104,25 +104,15 @@ class Store:
         )
 
     @staticmethod
-    def check_name(value, name):
-        if not isinstance(value, str) or not value or len(value) > 100:
-            raise ValueError(f"{name} must be a nonempty string <=100 characters")
-
-    @staticmethod
-    def check_integer(value, name, minimum):
-        if type(value) is not int or not minimum <= value <= 2**63 - 1:
-            raise ValueError(f"{name} must be an integer in {minimum}..2^63-1")
-
-    @staticmethod
     def run(con, run):
-        Store.check_name(run, "run")
         row = con.execute("SELECT * FROM runs WHERE id=?", (run,)).fetchone()
         if row is None:
             raise Missing("unknown run")
         return row
 
     def submit(self, run, records, shard_size=100, max_attempts=3):
-        self.check_name(run, "run")
+        if not isinstance(run, str) or not run or len(run) > 100:
+            raise ValueError("run must be a nonempty string <=100 characters")
         if not isinstance(records, list) or not records or len(records) > 100000:
             raise ValueError("records must be a list with 1..100000 rows")
         if type(shard_size) is not int or not 1 <= shard_size <= 1000:
@@ -149,7 +139,7 @@ class Store:
     @staticmethod
     def check_lease_seconds(seconds):
         if (
-            type(seconds) not in (int, float)
+            not isinstance(seconds, (int, float))
             or not math.isfinite(seconds)
             or not 0.05 <= seconds <= 300
         ):
@@ -157,7 +147,8 @@ class Store:
 
     def claim(self, run, worker, lease_seconds=5):
         self.check_lease_seconds(lease_seconds)
-        self.check_name(worker, "worker")
+        if not isinstance(worker, str) or not worker or len(worker) > 100:
+            raise ValueError("worker must be a nonempty string <=100 characters")
         with self.transaction() as con:
             config = self.run(con, run)
             expired = con.execute(
@@ -196,9 +187,6 @@ class Store:
             }
 
     def lease_row(self, con, run, shard, token, worker):
-        self.check_integer(shard, "shard", 0)
-        self.check_integer(token, "token", 1)
-        self.check_name(worker, "worker")
         self.run(con, run)
         s = con.execute("SELECT * FROM shards WHERE run=? AND id=?", (run, shard)).fetchone()
         if s is None:

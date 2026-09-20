@@ -1,0 +1,9 @@
+{
+  "date": "2026-09-21",
+  "scope": "New engineering validation; no new model-quality experiment",
+  "tests_passed": 32,
+  "before": "Python 中 True==1、1.0==1，原租约提交接受这些令牌替代值；非字符串run或过大整数可进入SQLite绑定层，导致异常连接关闭而非明确HTTP错误。",
+  "change": "run/worker统一字符串校验，shard/token要求有界且排除bool的整数，lease_seconds排除bool。非法请求返回400且不推进状态，后续合法提交仍可完成。",
+  "validation": "真实HTTP回归通过。单worker、4worker、4worker加故障的1200行/24分片实验，发布清单SHA完全一致；执行worker和协调器强制终止与重试。单次吞吐仅作运行记录，不作性能收益结论。",
+  "historical_source_note": "baseline/ preserves exact original core.py and test_http.py bytes, verified against unchanged evidence/local/summary.json; current source is tested separately."
+}

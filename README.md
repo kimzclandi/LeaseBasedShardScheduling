@@ -59,3 +59,5 @@ python3 scripts/demo.py --out runs/my-first-run --repeats 1
 历史实验及本次维护按记录日期分别保存。代码、测试与文档使用 AI 辅助开发；本实验仅验证单机多进程行为，未验证多机部署或生产负载。代码与合成样例：[MIT](LICENSE)。
 
 [2026-09-19 工程维护与验证边界](docs/maintenance/2026-09-19/README.md)
+
+[2026-09-21 工程维护与验证](docs/maintenance/2026-09-21/README.md)

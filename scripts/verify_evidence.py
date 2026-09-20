@@ -12,12 +12,15 @@ from shardlab.core import digest
 
 
 def main():
+    if not __debug__:raise SystemExit("Assertions must be enabled; remove -O")
     evidence = ROOT / "evidence" / "local"
     summary = json.loads((evidence / "summary.json").read_text())
     for name, sha in summary["source_sha256"].items():
         path = ROOT / name
         if name in {"shardlab/worker.py", "scripts/verify_evidence.py"}:
             path = ROOT / "docs/maintenance/2026-09-19/baseline" / f"{name}.txt"
+        if name in {'shardlab/core.py', 'tests/test_http.py'}:
+            path = ROOT / "docs/maintenance/2026-09-21/baseline" / f"{name}.txt"
         assert hashlib.sha256(path.read_bytes()).hexdigest() == sha, name
     manifests = list(evidence.glob("*/manifest.json"))
     assert len(manifests) == len(summary["results"])
