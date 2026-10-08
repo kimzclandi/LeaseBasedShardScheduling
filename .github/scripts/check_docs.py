@@ -12,6 +12,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = [
     "README.md",
+    "README.en.md",
     "CONTRIBUTING.md",
     "CODE_OF_CONDUCT.md",
     "docs/MAINTAINING.md",
