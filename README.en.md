@@ -1,6 +1,6 @@
-# LeaseBasedShardScheduling
+# Lease-based shard scheduling and recovery
 
-**Lease-based shard scheduling and failure recovery.**
+**LeaseBasedShardScheduling**
 
 [简体中文](README.md) | **English**
 

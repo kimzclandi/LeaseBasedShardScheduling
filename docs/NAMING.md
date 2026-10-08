@@ -2,6 +2,8 @@
 
 项目展示名称：**租约式分片调度与故障恢复**。
 
+English display name: **Lease-based shard scheduling and recovery**.
+
 GitHub 仓库名：`LeaseBasedShardScheduling`。
 
 历史仓库名：`ai-data-shard-lab`、`shard-runner`。旧名仅用于历史溯源。
