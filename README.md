@@ -1,4 +1,6 @@
-# 基于租约的分片任务调度与故障恢复
+# 租约式分片调度与故障恢复
+
+**LeaseBasedShardScheduling** · **简体中文** | [English](README.en.md)
 
 ![Project wordmark](.github/project-header.svg)
 

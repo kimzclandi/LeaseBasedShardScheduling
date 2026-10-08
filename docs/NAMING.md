@@ -1,6 +1,6 @@
 # 项目名称与兼容性
 
-项目展示名称：**基于租约的分片任务调度与故障恢复**。
+项目展示名称：**租约式分片调度与故障恢复**。
 
 GitHub 仓库名：`LeaseBasedShardScheduling`。
 
@@ -21,7 +21,7 @@ git remote set-url origin https://github.com/kimzclandi/LeaseBasedShardSchedulin
 
 ## 兼容性与历史记录
 
-此次调整公开仓库名和项目展示名。Python 包名、import、CLI、Go module 路径和协议标识保持兼容，安装与运行命令以当前 README 为准。
+仓库已使用 `LeaseBasedShardScheduling`，本次统一项目展示名、双语导航与克隆入口，不再次重命名远端仓库。Python 包名、import、CLI 和协议标识保持兼容，安装与运行命令以当前 README 为准。
 
 冻结协议、manifest、源码快照、原始预测、实验报告与许可条款保持不变。历史文件中的旧名不是另一个项目；改名不产生新的实验结果。现有 Issue 和 PR 编号继续使用。
 

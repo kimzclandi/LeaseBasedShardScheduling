@@ -1,0 +1,18 @@
+name: bilingual-readmes
+on:
+  push:
+    paths: ['README*.md', '.github/scripts/check_readmes.py', '.github/workflows/readmes.yml']
+  pull_request:
+    paths: ['README*.md', '.github/scripts/check_readmes.py', '.github/workflows/readmes.yml']
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python .github/scripts/check_readmes.py
