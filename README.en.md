@@ -1,4 +1,6 @@
-# AI Data Shard Lab · Shard Processing and Failure Recovery
+# Lease-based shard scheduling and recovery
+
+**LeaseBasedShardScheduling**
 
 [简体中文](README.md) | **English**
 
@@ -65,3 +67,5 @@ Historical experiments and maintenance retain their recorded dates. Code, tests 
 [2026-09-19 maintenance and validation scope](docs/maintenance/2026-09-19/README.md)
 
 [2026-09-21 maintenance and validation](docs/maintenance/2026-09-21/README.md)
+
+[Naming and compatibility](docs/NAMING.md) · [Contributing](CONTRIBUTING.md) · [Code of conduct](CODE_OF_CONDUCT.md) · [Maintenance guide](docs/MAINTAINING.md)

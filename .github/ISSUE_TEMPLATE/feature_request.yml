@@ -1,0 +1,30 @@
+name: Feature request / 功能建议
+description: Propose a concrete improvement with a way to evaluate it.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and user / 问题与使用者
+      description: Describe the task that is currently difficult and any existing workaround.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior / 建议行为
+      description: Include expected inputs and outputs, or the proposed navigation for a documentation change.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Acceptance criteria / 验收方式
+      description: A small example or measurable check; include data, dependency and compute requirements where applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and scope / 替代方案与范围
+      description: Explain tradeoffs and whether this changes an existing protocol, metric or compatibility contract.
